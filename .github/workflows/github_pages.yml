@@ -2,7 +2,7 @@ name: Deploy playground to Github Pages
 
 on:
   push:
-    branches: [main, github-pages]
+    branches: [main]
 
 defaults:
   run:
