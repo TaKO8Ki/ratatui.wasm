@@ -2,6 +2,16 @@
 
 HTML Canvas backend for ratatui
 
-[examples/scrollbar.rs](https://github.com/ratatui-org/ratatui/blob/df0eb1f8e94752db542ff58e1453f4f8beab17e2/examples/scrollbar.rs)
+## Examples
 
-![demo](./resources/demo.gif)
+[scrollbar](./examples/scrollbar/)
+
+![scrollbar](./resources/scrollbar.gif)
+
+[table]((./examples/table/))
+
+![table](./resources/table.gif)
+
+[calendar](./examples/calendar/)
+
+![calendar](./resources/calendar.png)
