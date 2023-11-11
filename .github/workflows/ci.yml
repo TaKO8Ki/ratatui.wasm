@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
       - name: Cargo fmt
         run: cargo fmt --all -- --check
 
@@ -16,7 +17,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
       - uses: Swatinem/rust-cache@v2
+      
+      - run: |
+          rustup update stable
+          rustup default stable
+          rustup target add wasm32-unknown-unknown
+
       - name: Cargo check
         run: cargo check --target wasm32-unknown-unknown
 
@@ -25,7 +33,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
       - name: Add clippy
         run: rustup component add clippy
+
       - name: Run lint
         run: cargo clippy
