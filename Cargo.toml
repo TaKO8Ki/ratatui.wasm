@@ -1,0 +1,11 @@
+[workspace]
+members = [
+    "canvas-backend",
+    "examples/table",
+    "examples/calendar",
+    "examples/scrollbar"
+]
+resolver = "2"
+
+[workspace.dependencies]
+ratatui = { version = "0.24.0", default-features = false }
